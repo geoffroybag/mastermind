@@ -1,5 +1,11 @@
-*{
-    border: 1px solid black;
+/* *{
+    border : 1px solid black;
+} */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section{
@@ -11,22 +17,40 @@ section{
 
 .guess{
     border : 2px solid tomato;
+    background-color: burlywood;
     display :flex;
     justify-content: space-between;
     align-self: center;
     width : 400px;
     margin : 20px;
+    height : 45px;
 }
 
+.result{
+    border : 5px solid black;
+    color : burlywood;
+    background-color : burlywood;
+    display :flex;
+    justify-content: space-between;
+    align-self: center;
+    width : 400px;
+    margin : 20px;
+    height : 45px;
+    /* display : none; */
+}
+.hole-result{
+    display : none;
+}
 .hole{
     border : 1px solid black;
     border-radius: 50%;
     padding : 10px;
-
+    background-color: black;
+    margin : 10px;
 }
 
 .selected{
-    border : 2px solid rebeccapurple;
+    border : 2px solid white;
 }
 
 .blocked{
@@ -37,10 +61,12 @@ section{
     border : 1px solid black;
     border-radius: 50%;
     padding : 10px;
+    margin : 5px;
 }
 
 .color-section{
     display : flex;
+    margin : 10px;
 }
 
 .white{
@@ -57,4 +83,15 @@ section{
 
 .green{
     background-color: green;
+}
+
+button{
+    border : 2px solid brown;
+    background-color: brown;
+    border-radius: 3px;
+    padding : 10px;
+    margin : 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
 }
