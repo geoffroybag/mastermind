@@ -2,7 +2,7 @@
     border : 1px solid black;
 } */
 
-body{
+.background{
     background-image: url(https://s3.insidehook.com/header_american_1461329777.jpg);
     display: flex;
     flex-direction: column;
@@ -45,7 +45,9 @@ footer{
 
 .result{
     border : 5px solid black;
-    color : burlywood;
+    text-align: center;
+    margin : auto 0;
+    /* color : burlywood; */
     background-color : burlywood;
     display :flex;
     justify-content: space-between;

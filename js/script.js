@@ -148,6 +148,6 @@ $(document).ready(function(){
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);
-    setTimeout(function(){$(".result-4").addClass(arrayResult[3])},2000);
+    setTimeout(function timer(){$(".result-4").addClass(arrayResult[3])},2000);
 
     });
