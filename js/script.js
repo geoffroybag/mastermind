@@ -63,22 +63,24 @@ $(".hole").click(function () {
 // push the color picked to the chosen hole
 $(".color-section").click(function () {
     var buttonColor = $(event.target);
-    arrayGuess[holder-1]=buttonColor.attr('name')
-    console.log(arrayGuess);  
-    var pushColor1 = document.getElementsByName("1");
-    $(pushColor1[pushColor1.length-1]).removeClass("yellow white violet green");
-    $(pushColor1[pushColor1.length-1]).addClass(arrayGuess[0]);
-    var pushColor2 = document.getElementsByName("2")
-    $(pushColor2[pushColor2.length-1]).removeClass("yellow white violet green");
-    $(pushColor2[pushColor2.length-1]).addClass(arrayGuess[1]);
-    var pushColor3 = document.getElementsByName("3")
-    $(pushColor3[pushColor3.length-1]).removeClass("yellow white violet green");
-    $(pushColor3[pushColor3.length-1]).addClass(arrayGuess[2]);
-    var pushColor4 = document.getElementsByName("4")
-    $(pushColor4[pushColor4.length-1]).removeClass("yellow white violet green");
-    $(pushColor4[pushColor4.length-1]).addClass(arrayGuess[3]);
+    console.log($(event.target));
+    // arrayGuess[holder-1]=buttonColor.attr('name')
+    console.log(arrayGuess); 
 
-    
+    var selectedHole = $(".selected")
+    $(selectedHole).removeClass("yellow white violet green");
+    $(".selected").addClass(arrayGuess[0]);
+
+    console.log(arrayGuess[0])
+    $(selectedHole).removeClass("yellow white violet green");
+    $(selectedHole).addClass(arrayGuess[1]);
+
+    $(selectedHole).removeClass("yellow white violet green");
+    $(selectedHole).addClass(arrayGuess[2]);
+
+    $(selectedHole).removeClass("yellow white violet green");
+    $(selectedHole).addClass(arrayGuess[3]);  
+
 
 });
 
