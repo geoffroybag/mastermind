@@ -49,6 +49,7 @@ var holder = 0;
 // select hole to add color : show selection by different border and remove all colors from hole selected
 $(".hole").click(function () {
     holder = 0;
+    $(".color-section").removeClass("blocked")
     var button = $(event.target);
     holder = (button.attr('name'));
     button.removeClass("yellow white violet green")
@@ -62,27 +63,23 @@ $(".hole").click(function () {
 
 // push the color picked to the chosen hole
 $(".color-section").click(function () {
-    var buttonColor = $(event.target);
-    console.log($(event.target));
-    // arrayGuess[holder-1]=buttonColor.attr('name')
-    console.log(arrayGuess); 
+ 
+  var buttonColor = $(event.target);
+  arrayGuess[holder-1]=buttonColor.attr('name')
+  console.log(arrayGuess); 
 
-    var selectedHole = $(".selected")
-    $(selectedHole).removeClass("yellow white violet green");
-    $(".selected").addClass(arrayGuess[0]);
-
-    console.log(arrayGuess[0])
-    $(selectedHole).removeClass("yellow white violet green");
-    $(selectedHole).addClass(arrayGuess[1]);
-
-    $(selectedHole).removeClass("yellow white violet green");
-    $(selectedHole).addClass(arrayGuess[2]);
-
-    $(selectedHole).removeClass("yellow white violet green");
-    $(selectedHole).addClass(arrayGuess[3]);  
-
-
+  var selectedHole = $(".selected")
+  selectedHole.removeClass("yellow white violet green");
+  selectedHole.addClass(arrayGuess[holder-1]);
+  if(holder<4){
+  holder++
+  selectedHole.next().addClass("selected")
+  selectedHole.removeClass("selected")
+}
+  
+  
 });
+
 
 var count = 1
 
@@ -96,7 +93,9 @@ $(".btn-check").click(function () {
     $(tempRes).html(resBW)
     // block clics on previous divs after test
     $(".guess").addClass("blocked")
+    $(".color-section").addClass("blocked")
     $(".hole").removeClass("selected")
+
    
     count +=1
     
@@ -121,21 +120,18 @@ $(".btn-check").click(function () {
       //function click for new Guess
       newGuess.find(".hole").click(function(){
             holder = 0;
+            $(".color-section").removeClass("blocked")
           var button = $(event.target);
           holder = (button.attr('name'));
           button.removeClass("yellow white violet green")
           button.addClass("selected");
-          button.next().removeClass("selected");
-          button.next().next().removeClass("selected");
-          button.next().next().next().removeClass("selected");
-          button.prev().removeClass("selected");
-          button.prev().prev().removeClass("selected");
-          button.prev().prev().prev().removeClass("selected"); 
+          button.siblings().removeClass("selected"); 
     })
         }
     else {
       $(".result").css({"opacity":"1"});;
       $(".result").css({"display":"flex"});;
+      $(".hole-result").css({"display":"flex"});;
     }
     
 })
