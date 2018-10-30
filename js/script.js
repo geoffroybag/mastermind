@@ -60,10 +60,7 @@ $(".hole").click(function () {
     }
 });
 
-$(".btn-play").click(function(){
-  $("section").css({"display":"flex"})
-  $(".btn-play").css({"display":"none"})
-})
+
 // push the color picked to the chosen hole
 $(".color-section").click(function () {
  
@@ -105,12 +102,15 @@ $(".btn-check").click(function () {
     if(blackGuess<4){
     // create new div for new guess
     var newGuess = $(
-      '<div class="guess" name=guess'+count+'">'+ count +
-      '  <div class="hole" name="1"></div>' +
-      '  <div class="hole" name="2"></div>' +
-      '  <div class="hole" name="3"></div>' + 
-      '  <div class="hole" name="4"></div>' +
-      '  <div class="temp-result" name = "tempresult'+count+'"></div>' +
+      '<div class="guess" name=guess'+count+'">'+
+        '<div class="subdiv-number">'+count+'</div>' +
+        ' <div class="subdiv-hole"> ' + 
+          '  <div class="hole" name="1"></div>' +
+          '  <div class="hole" name="2"></div>' +
+          '  <div class="hole" name="3"></div>' + 
+          '  <div class="hole" name="4"></div>' + 
+      ' </div>' +
+      '  <div class="subdiv-res temp-result" name = "tempresult'+count+'"></div>' +
       '</div>');
 
       // insert new div 
@@ -151,3 +151,9 @@ $(document).ready(function(){
     setTimeout(function timer(){$(".result-4").addClass(arrayResult[3])},2000);
 
     });
+
+// let's play !
+  $(".btn-play").click(function(){
+    $("section").css({"display":"flex"})
+    $(".btn-play").css({"display":"none"})
+  })
