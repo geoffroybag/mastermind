@@ -60,7 +60,10 @@ $(".hole").click(function () {
     }
 });
 
-
+$(".btn-play").click(function(){
+  $("section").css({"display":"flex"})
+  $(".btn-play").css({"display":"none"})
+})
 // push the color picked to the chosen hole
 $(".color-section").click(function () {
  
@@ -132,6 +135,8 @@ $(".btn-check").click(function () {
       $(".result").css({"opacity":"1"});;
       $(".result").css({"display":"flex"});;
       $(".hole-result").css({"display":"flex"});;
+      $("footer").css({"display":"flex"});;
+      
     }
     
 })
@@ -143,5 +148,6 @@ $(document).ready(function(){
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);
-    $(".result-4").addClass(arrayResult[3]);
+    setTimeout(function(){$(".result-4").addClass(arrayResult[3])},2000);
+
     });
