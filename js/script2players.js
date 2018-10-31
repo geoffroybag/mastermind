@@ -61,11 +61,11 @@ $(".color-hide").click(function () {
   holder++
   selectedHole.next().addClass("selected")
   selectedHole.removeClass("selected")
-  $(".result-1").addClass(arrayResult[0])
-  $(".result-2").addClass(arrayResult[1])
-  $(".result-3").addClass(arrayResult[2])
-  $(".result-4").addClass(arrayResult[3])
 }
+$(".result-1").addClass(arrayResult[0])
+$(".result-2").addClass(arrayResult[1])
+$(".result-3").addClass(arrayResult[2])
+$(".result-4").addClass(arrayResult[3])
 });
 
 // push the color picked to the chosen hole
