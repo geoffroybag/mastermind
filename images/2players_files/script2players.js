@@ -2,17 +2,13 @@
 var arrayDepart = ["white","blue","yellow","green", "red", "violet"]
 
 // array resultat
-var arrayResult = [];
+var arrayResult = [0,0,0,0];
 
 
 // Random pick 4 numbers in arrayDepart to log the code to break (without doublons)
-function masterMind(){
-    while(arrayResult.length<4){
-      var randomIndex = Math.floor(Math.random() * arrayDepart.length)
-      if (arrayResult.indexOf(arrayDepart[randomIndex])==-1){
-        arrayResult.push(arrayDepart[randomIndex])
-      }
-    }
+function masterMind2Players(){
+    
+    
     return arrayResult
 }
 
@@ -60,25 +56,48 @@ $(".hole").click(function () {
     }
 });
 
-
-// push the color picked to the chosen hole
-$(".color-section").click(function () {
+ 
+// CODE PART /// push the color picked to the chosen hole
+$(".color-hide").click(function () {
  
   var buttonColor = $(event.target);
-  arrayGuess[holder-1]=buttonColor.attr('name')
-  console.log(arrayGuess); 
+  arrayResult[holder-1]=buttonColor.attr('name')
+  console.log(arrayResult); 
 
   var selectedHole = $(".selected")
   selectedHole.removeClass("yellow white blue green red violet");
-  selectedHole.addClass(arrayGuess[holder-1]);
+  selectedHole.addClass(arrayResult[holder-1]);
   if(holder<4){
   holder++
   selectedHole.next().addClass("selected")
   selectedHole.removeClass("selected")
 }
-  
-  
 });
+
+// push the color picked to the chosen hole
+$(".color-section").click(function () {
+ 
+    var buttonColor = $(event.target);
+    arrayGuess[holder-1]=buttonColor.attr('name')
+    console.log(arrayGuess); 
+  
+    var selectedHole = $(".selected")
+    selectedHole.removeClass("yellow white blue green red violet");
+    selectedHole.addClass(arrayGuess[holder-1]);
+    if(holder<4){
+    holder++
+    selectedHole.next().addClass("selected")
+    selectedHole.removeClass("selected")
+  }    
+});
+
+
+
+$(".btn-hide").click(function () {
+    $(".section-enter-code").css({"display":"none"})
+    $(".section-guess-the-code").css({"display":"flex"})
+
+})
 
 
 var count = 1
@@ -87,57 +106,10 @@ var count = 1
 $(".btn-check").click(function () {
     // run function to test if arrays are equal
     testGuess();
+    var resBW = $(
+      '<div>B= '+blackGuess+'<br> W= '+ whiteGuess+'</div>')
     var tempRes = document.getElementsByName("tempresult"+count)
-    $(tempRes).addClass("bw")
-    if (blackGuess==4 && whiteGuess==0){
-      $(tempRes).addClass("b4w0")
-    }
-
-    if (blackGuess==3 && whiteGuess==1){
-      $(tempRes).addClass("b3w1")
-    }
-
-    if (blackGuess==3 && whiteGuess==0){
-      $(tempRes).addClass("b3w0")
-    }
-    if (blackGuess==2 && whiteGuess==2){
-      $(tempRes).addClass("b2w2")
-    }
-    if (blackGuess==2 && whiteGuess==1){
-      $(tempRes).addClass("b2w1")
-    }
-    if (blackGuess==2 && whiteGuess==0){
-      $(tempRes).addClass("b2w0")
-    }
-    if (blackGuess==1 && whiteGuess==3){
-      $(tempRes).addClass("b1w3")
-    }
-    if (blackGuess==1 && whiteGuess==2){
-      $(tempRes).addClass("b1w2")
-    }
-    if (blackGuess==1 && whiteGuess==1){
-      $(tempRes).addClass("b1w1")
-    }
-    if (blackGuess==1 && whiteGuess==0){
-      $(tempRes).addClass("b1w0")
-    }
-    if (blackGuess==0 && whiteGuess==4){
-      $(tempRes).addClass("b0w4")
-    }
-    if (blackGuess==0 && whiteGuess==3){
-      $(tempRes).addClass("b0w3")
-    }
-    if (blackGuess==0 && whiteGuess==2){
-      $(tempRes).addClass("b0w2")
-    }
-    if (blackGuess==0 && whiteGuess==1){
-      $(tempRes).addClass("b0w1")
-    }
-    if (blackGuess==0 && whiteGuess==0){
-      $(tempRes).addClass("b0w0")
-    }
-
-
+    $(tempRes).html(resBW)
     // block clics on previous divs after test
     $(".guess").addClass("blocked")
     $(".color-section").addClass("blocked")
@@ -145,13 +117,6 @@ $(".btn-check").click(function () {
 
    
     count +=1
-
-    if(count == 9){
-      console.log("game over")
-      $(".result").css({"opacity":"1"});;
-      $(".result").css({"display":"flex"});;
-      $(".hole-result").css({"display":"flex"});;
-    }
     
     if(blackGuess<4){
     // create new div for new guess
@@ -196,14 +161,17 @@ $(".btn-check").click(function () {
 })
 
 
-// get mastermind at loading of page
+// get mastermind2Players at loading of page
 $(document).ready(function(){
-    masterMind();
+    masterMind2Players();
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);
     $(".result-4").addClass(arrayResult[3]);
-
+    $("section").css({"display":"flex"})
+    $(".btn-play").css({"display":"none"})
+    $(".btn-play2").css({"display":"none"})
+    $(".section-guess-the-code").css({"display":"none"})
     });
 
 // let's play !
@@ -212,16 +180,3 @@ $(document).ready(function(){
     $(".btn-play").css({"display":"none"})
     $(".btn-play2").css({"display":"none"})
   })
-
-
-  $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-});

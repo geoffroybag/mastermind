@@ -171,62 +171,12 @@ a{
   font-size:40px;
 }
 
+
+.b0w3{
+    background-image: url(https://store-images.s-microsoft.com/image/apps.46255.9007199266424621.c10e5482-6868-47c9-a460-eaaf9fe132bd.a71773e3-e5da-44e5-9e55-c4b589af31ea?mode=scale&q=90&h=300&w=300);
+}
+
 h2{
     text-align: center;
     margin-bottom: 0px;
-}
-
-.bw {
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left : 20px;
-    /* background-color: burlywood; */
-}
-.b4w0{
-    background-image: url(../images/resultats/b4w0.png);
-}
-.b3w1{
-    background-image: url(../images/resultats/b3w1.png);
-}
-.b3w0{
-    background-image: url(../images/resultats/b3w0.png);
-}
-.b2w2{
-    background-image: url(../images/resultats/b2w2.png);
-}
-.b2w1{
-    background-image: url(../images/resultats/b2w1.png);
-}
-.b2w0{
-    background-image: url(../images/resultats/b2w0.png);
-}
-.b1w3{
-    background-image: url(../images/resultats/b1w3.png);
-}
-.b1w2{
-    background-image: url(../images/resultats/b1w2.png);
-}
-.b1w1{
-    background-image: url(../images/resultats/b1w1.png);
-}
-.b1w0{
-    background-image: url(../images/resultats/b1w0.png);
-}
-.b0w4{
-    background-image: url(../images/resultats/b0w4.png);
-}
-.b0w3{
-    background-image: url(../images/resultats/b0w3.png);
-}
-.b0w2{
-    background-image: url(../images/resultats/b0w2.png);
-}
-.b0w1{
-    background-image: url(../images/resultats/b0w1.png);
-}
-.b0w0{
-    background-image: url(../images/resultats/b0w0.png);
 }
