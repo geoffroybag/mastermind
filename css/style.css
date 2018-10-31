@@ -2,13 +2,18 @@
     border : 1px solid black;
 } */
 
+body{
+    height : 1200px;
+}
+
 .background{
     background-image: url(https://s3.insidehook.com/header_american_1461329777.jpg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: helvetica;
-    height : 100vh;
+    height : 100%;
     width : 100%;
 }
 
@@ -19,10 +24,38 @@ header{
     color : white;
 }
 
-footer{
+.well-done{
+    background-image: url('http://monipag.com/antonin-pelletier/wp-content/uploads/sites/1349/2013/05/bateman-american-psycho-glasses.png.jpg');
     position: absolute;
-    top : 100px;
+    top : 200px;
+    background-size: cover;
+    display: none;
+    border : 8px solid white;
     display : none;
+    height : 500px;
+    width: 800px;
+}
+.try-again{
+    background-image: url('http://monipag.com/antonin-pelletier/wp-content/uploads/sites/1349/2013/05/bateman-american-psycho-glasses.png.jpg');
+    position: absolute;
+    top : 200px;
+    background-size: cover;
+    border : 8px solid white;
+    display : none;
+    height : 500px;
+    width: 800px;
+}
+
+
+
+footer h3{
+    color : white;
+    text-align: center;
+    margin : auto 0;
+    width : 100%;
+    font-size: 50px;
+    margin-top : 350px;
+    font-weight: lighter;
 }
 
 section{
@@ -62,7 +95,7 @@ section{
 .subdiv-hole{
     display : flex;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
     width : 70%;
 }
 
@@ -92,7 +125,7 @@ section{
 }
 
 .selected{
-    border : 5px solid white;
+    border : 3px solid #af9574;
 }
 
 .blocked{
@@ -230,3 +263,67 @@ h2{
 .b0w0{
     background-image: url(../images/resultats/b0w0.png);
 }
+
+.odometer {
+    font-size: 50px;
+    margin-top : 20px;
+}
+
+.transparent {
+    opacity : 0.3;
+}
+
+footer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position : fixed;
+    left : 50%;
+    top : 0;
+    transform: translate(-50%,50%);
+}
+
+.play-again{
+    background-color: #f95d5d;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+
+@media(max-width : 768px){
+  
+section{
+    width : 90%;
+}
+
+.result{
+    width : 90%;
+}
+.guess{
+    width : 90%;
+}
+.color-section{
+    width : 90%;
+}
+.color-hide{
+    width : 90%;
+}
+
+.try-again{
+    width : 90%;
+    height : 25%;
+}
+.well-done{
+    width : 90%;
+    height : 25%;
+}
+footer h3{
+    font-size : 20px;
+    margin-top: 11px;
+}
+.play-again {
+    font-size : 10px;
+    width : 155px;
+}
+    }

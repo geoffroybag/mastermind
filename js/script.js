@@ -55,9 +55,6 @@ $(".hole").click(function () {
     button.removeClass("yellow white blue green red violet")
     button.addClass("selected");
     button.siblings().removeClass("selected");
-    if(arrayGuess[holder-1]!==0){
-      console.log("hi")
-    }
 });
 
 
@@ -75,9 +72,7 @@ $(".color-section").click(function () {
   holder++
   selectedHole.next().addClass("selected")
   selectedHole.removeClass("selected")
-}
-  
-  
+} 
 });
 
 
@@ -92,11 +87,9 @@ $(".btn-check").click(function () {
     if (blackGuess==4 && whiteGuess==0){
       $(tempRes).addClass("b4w0")
     }
-
     if (blackGuess==3 && whiteGuess==1){
       $(tempRes).addClass("b3w1")
     }
-
     if (blackGuess==3 && whiteGuess==0){
       $(tempRes).addClass("b3w0")
     }
@@ -137,23 +130,28 @@ $(".btn-check").click(function () {
       $(tempRes).addClass("b0w0")
     }
 
-
     // block clics on previous divs after test
     $(".guess").addClass("blocked")
     $(".color-section").addClass("blocked")
     $(".hole").removeClass("selected")
-
    
     count +=1
 
-    if(count == 9){
+    if(count > 8 && blackGuess<4){
       console.log("game over")
-      $(".result").css({"opacity":"1"});;
-      $(".result").css({"display":"flex"});;
-      $(".hole-result").css({"display":"flex"});;
+      $(".result").css({"display":"flex"});
+      $(".hole-result").css({"display":"flex"});
+      $(".btn-check").css({"display":"none"});
+      $(".color-section").css({"display":"none"});
+      setTimeout(function(){
+        $(".try-again").css({"display":"flex"})
+      }, 2000);
+      setTimeout(function(){
+        $(".background").addClass("transparent")
+      }, 2000);
     }
     
-    if(blackGuess<4){
+    if(blackGuess<4 && count < 9){
     // create new div for new guess
     var newGuess = $(
       '<div class="guess" name=guess'+count+'">'+
@@ -185,12 +183,15 @@ $(".btn-check").click(function () {
           button.siblings().removeClass("selected"); 
     })
         }
-    else {
-      $(".result").css({"opacity":"1"});;
+    if (blackGuess == 4) {
       $(".result").css({"display":"flex"});;
-      $(".hole-result").css({"display":"flex"});;
-      $("footer").css({"display":"flex"});;
-      
+      $(".hole-result").css({"display":"flex"});
+      setTimeout(function(){
+        $(".well-done").css({"display":"flex"})
+      }, 2000);
+      setTimeout(function(){
+        $(".background").addClass("transparent")
+      }, 2000);
     }
     
 })
@@ -199,6 +200,7 @@ $(".btn-check").click(function () {
 // get mastermind at loading of page
 $(document).ready(function(){
     masterMind();
+    $(".color-section").addClass("blocked")
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);
@@ -225,3 +227,8 @@ $(document).ready(function(){
         }
     });
 });
+
+
+setTimeout(function(){
+  odometer.innerHTML = 59072;
+}, 500);

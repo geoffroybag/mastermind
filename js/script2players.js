@@ -5,13 +5,6 @@ var arrayDepart = ["white","blue","yellow","green", "red", "violet"]
 var arrayResult = [0,0,0,0];
 
 
-// Random pick 4 numbers in arrayDepart to log the code to break (without doublons)
-function masterMind2Players(){
-    
-    
-    return arrayResult
-}
-
 // arrayGuess
 var arrayGuess = [0,0,0,0];
 var whiteGuess = 0
@@ -51,9 +44,6 @@ $(".hole").click(function () {
     button.removeClass("yellow white blue green red violet")
     button.addClass("selected");
     button.siblings().removeClass("selected");
-    if(arrayGuess[holder-1]!==0){
-      console.log("hi")
-    }
 });
 
  
@@ -71,6 +61,10 @@ $(".color-hide").click(function () {
   holder++
   selectedHole.next().addClass("selected")
   selectedHole.removeClass("selected")
+  $(".result-1").addClass(arrayResult[0])
+  $(".result-2").addClass(arrayResult[1])
+  $(".result-3").addClass(arrayResult[2])
+  $(".result-4").addClass(arrayResult[3])
 }
 });
 
@@ -111,11 +105,9 @@ $(".btn-check").click(function () {
     if (blackGuess==4 && whiteGuess==0){
         $(tempRes).addClass("b4w0")
       }
-  
       if (blackGuess==3 && whiteGuess==1){
         $(tempRes).addClass("b3w1")
       }
-  
       if (blackGuess==3 && whiteGuess==0){
         $(tempRes).addClass("b3w0")
       }
@@ -155,8 +147,6 @@ $(".btn-check").click(function () {
       if (blackGuess==0 && whiteGuess==0){
         $(tempRes).addClass("b0w0")
       }
-    
-
 
     // block clics on previous divs after test
     $(".guess").addClass("blocked")
@@ -166,7 +156,22 @@ $(".btn-check").click(function () {
    
     count +=1
     
-    if(blackGuess<4){
+    if(count > 8 && blackGuess<4){
+        console.log("game over")
+        $(".result").css({"display":"flex"});
+        $(".hole-result").css({"display":"flex"});
+        $(".btn-check").css({"display":"none"});
+        $(".color-section").css({"display":"none"});
+        setTimeout(function(){
+            $(".try-again").css({"display":"flex"})
+          }, 2000);
+          setTimeout(function(){
+            $(".background").addClass("transparent")
+          }, 2000);
+      }
+
+
+    if(blackGuess<4 && count < 9){
     // create new div for new guess
     var newGuess = $(
       '<div class="guess" name=guess'+count+'">'+
@@ -198,20 +203,24 @@ $(".btn-check").click(function () {
           button.siblings().removeClass("selected"); 
     })
         }
-    else {
-      $(".result").css({"opacity":"1"});;
-      $(".result").css({"display":"flex"});;
-      $(".hole-result").css({"display":"flex"});;
-      $("footer").css({"display":"flex"});;
-      
-    }
+        if (blackGuess == 4) {
+            $(".result").css({"display":"flex"});;
+            $(".hole-result").css({"display":"flex"});;
+            setTimeout(function(){
+                $(".well-done").css({"display":"flex"})
+              }, 2000);
+              setTimeout(function(){
+                $(".background").addClass("transparent")
+              }, 2000);
+
+          }
     
 })
 
 
 // get mastermind2Players at loading of page
 $(document).ready(function(){
-    masterMind2Players();
+    $(".color-section").addClass("blocked")
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);

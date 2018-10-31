@@ -6,23 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" />
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
 <div class="background">
 
 
     <header>
         <h1><img src="./images/logo.png" alt=""></h1>
         <h2>The classic code cracking game<br>up to</h2>
-        <div id="shiva"><span class="count">59049</span></div>
+        <div id="odometer" class="odometer">0</div>
+
         <h2>combinations</h2>
 
         <button class = "btn-play">1 PLAYER</button>
         <button class = "btn-play2"><a href="./index2players.html">2 PLAYERS</a></button>
     </header>
+    <section>
 
-<section>
         <div class="result">
                 <div class="subdiv-number"></div>
                 <div class="subdiv-hole">
@@ -57,17 +61,22 @@
             <div class="color violet" name = "violet"></div>
         </div>
 </section>
+</div>
 
-<footer>
-    <img src="http://monipag.com/antonin-pelletier/wp-content/uploads/sites/1349/2013/05/bateman-american-psycho-glasses.png.jpg" alt="">
+<footer class = "well-done">
+        <h3>Well Done</h3>
+        <button class = "play-again"><a href="./index.html">Play again</a> </button>
 </footer>
 
-    
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-    <script src="./js/script.js"></script>
+<footer class = "try-again">
+        <h3>Try again</h3>
+        <button class = "play-again"><a href="./index.html">Play again</a> </button>
+</footer>
 
-</div>
+<script src="http://github.hubspot.com/odometer/odometer.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
