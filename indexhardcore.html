@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hardcore</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="background">
+
+
+    <header>
+            <div class="logo">
+                    <h1></h1>
+            </div>
+            <div class="header-bottom">
+                    <h2></h2>
+                </div>
+    </header>
+
+    <section>
+            <div class="help">
+                    <div class = "btn-help"><h5>?</h5></div>
+            </div>
+            <div class="result">
+                    <div class="subdiv-number"></div>
+                    <div class="subdiv-hole">
+                        <div class="hole hole-result result-1"></div>
+                        <div class="hole hole-result result-2"></div>
+                        <div class="hole hole-result result-3"></div>
+                        <div class="hole hole-result result-4"></div>
+                    </div>
+                    <div class="subdiv-res temp-result" name = "tempresult0">
+                        </div>
+            </div>    
+    
+            <div class="guess guess1" name="guess1">
+                <div class="subdiv-number">1</div>
+                <div class="subdiv-hole">
+                    <div class="hole" name = "1"></div>
+                    <div class="hole" name = "2"></div>
+                    <div class="hole" name = "3"></div>
+                    <div class="hole" name = "4"></div>
+                </div>
+                <div class="subdiv-res temp-result" name = "tempresult1">
+                </div>
+            </div>
+    
+            <button class = "btn-check">GO</button>
+            <div class = "color-section">
+                <div class="color white" name = "white"></div>
+                <div class="color blue" name = "blue"></div>
+                <div class="color yellow" name = "yellow"></div>
+                <div class="color green" name = "green"></div>
+                <div class="color red" name = "red"></div>
+                <div class="color violet" name = "violet"></div>
+            </div>
+    </section>
+    </div>
+    
+    <footer class = "well-done">
+            <h3>Well Done</h3>
+            <button class = "play-again"><a href="./index.html">Play again</a> </button>
+    </footer>
+    
+    <footer class = "try-again">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    
+                <!-- Symbol -->
+                <symbol id="s-text">
+                  <text text-anchor="middle"
+                          x="50%" y="50%" dy=".35em">
+                      TRY AGAIN
+                   </text>
+                </symbol>
+              
+                <!-- Duplicate symbols -->
+                <use xlink:href="#s-text" class="text"
+                          ></use>
+                <use xlink:href="#s-text" class="text"
+                          ></use>
+                <use xlink:href="#s-text" class="text"
+                          ></use>
+                <use xlink:href="#s-text" class="text"
+                          ></use>
+                <use xlink:href="#s-text" class="text"
+                          ></use>
+              
+              </svg></h3>
+            <button class = "play-again"><a href="./index.html">Play again</a> </button>
+    </footer>
+    
+    <div class="help-section">
+        <div class= "help-box">
+            <h5>Help Section</h5>
+            
+            <p>Mastermind is a puzzle game, in which one player tries to guess the code their opponent comes up with</p>
+            <p>The code maker select a code - a combination of colors</p>
+            <p>This is the code that the code breaker will try to guess (max 8 guesses).</p>
+            <p>Next to each "guess row" is a small square with enough holes for four tiny pegs.</p>
+                <p>These pegs only come in two colors: white and black and give clues about how good the guess was:</p>
+                <ul>
+                    <li>Each white peg means that one of the guessed pegs is correct, but is in the wrong hole.</li>
+                    <li>Each black peg means that one of the guessed pegs is correct, and is in the right hole.</li>
+                    <li>The order of the white and black pegs does not matter.</li>
+                </ul>
+                   <p>Continue until the code is guessed or there are no more guesses left. 
+                       The code breaker continues to make guesses, using information from all the previous hints he earned. 
+                       If he manages to guess the complete code in exactly the right order, he wins the game. 
+                       If he fails to guess and fills every row with pegs, the code maker wins instead.</p>
+            
+        </div>
+    </div>
+    
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="./js/scripthardcore.js"></script>
+    </body>
+    </html>

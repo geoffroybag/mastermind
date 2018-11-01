@@ -54,9 +54,7 @@ h1{
 
 
 }
-.btn-play{
-    display: inline;
-}
+
 
 .background{
     /* background-image: url(https://s3.insidehook.com/header_american_1461329777.jpg); */
@@ -233,7 +231,7 @@ section{
 button{
     background-color: #676161;
     padding: 10px 35px;
-    margin: 10px;
+    margin: 30px 10px 0 10px;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -241,7 +239,6 @@ button{
     border: none;
     width : 200px;
     cursor: pointer;
-    margin-top : 40px;
 }
 
 a{
@@ -395,6 +392,31 @@ footer{
     font-size : 10px;
 }
 
+.normal{
+    display : none;
+}
+
+.normal:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    background-color : white;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
+
+.hardcore{
+    display : none;
+}
+
+.hardcore:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    background-color : white;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
 
 @media(max-width : 768px){
   
@@ -414,15 +436,11 @@ section{
 }
 
 .btn-play{
-    margin-top : 0;
-    margin : 10px;
-    height: 60px;
+    display: inline;
 }
 
 .btn-play2{
-    margin-top : 0;
-    margin : 10px;
-    height: 60px;
+    display: inline;
 }
 
 .header-bottom{

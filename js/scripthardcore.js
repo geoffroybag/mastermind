@@ -6,12 +6,10 @@ var arrayResult = [];
 
 
 // Random pick 4 numbers in arrayDepart to log the code to break (without doublons)
-function masterMind(){
+function masterMindHardcore(){
     while(arrayResult.length<4){
       var randomIndex = Math.floor(Math.random() * arrayDepart.length)
-      if (arrayResult.indexOf(arrayDepart[randomIndex])==-1){
         arrayResult.push(arrayDepart[randomIndex])
-      }
     }
     return arrayResult
 }
@@ -206,33 +204,22 @@ $(".btn-check").click(function () {
 })
 
 
-// get mastermind at loading of page
+// get mastermindHardcore at loading of page
 $(document).ready(function(){
-    masterMind();
+    masterMindHardcore();
     $(".color-section").addClass("blocked")
     $(".result-1").addClass(arrayResult[0]);
     $(".result-2").addClass(arrayResult[1]);
     $(".result-3").addClass(arrayResult[2]);
     $(".result-4").addClass(arrayResult[3]);
-
-    });
-
-// let's play !
-$(".btn-play").click(function(){
-    $(".normal").css({"display":"inline"})
-    $(".hardcore").css({"display":"inline"})
-  $(".btn-play").css({"display":"none"})
-  $(".btn-play2").css({"display":"none"})
-})
-
-  $(".normal").click(function(){
     $("section").css({"display":"flex"})
     $(".btn-play").css({"display":"none"})
     $(".btn-play2").css({"display":"none"})
-    $(".header-bottom").css({"display":"none"})
-  })
+    $(".section-guess-the-code").css({"display":"none"})
+    });
 
-  $(".hardcore").click(function(){
+// let's play !
+  $(".btn-play").click(function(){
     $("section").css({"display":"flex"})
     $(".btn-play").css({"display":"none"})
     $(".btn-play2").css({"display":"none"})
@@ -251,9 +238,4 @@ $(".btn-play").click(function(){
         }
     });
 });
-
-
-setTimeout(function(){
-  odometer.innerHTML = 59072;
-}, 500);
 
