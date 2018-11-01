@@ -79,8 +79,10 @@ header{
 
 .well-done{
     background-image: url('http://monipag.com/antonin-pelletier/wp-content/uploads/sites/1349/2013/05/bateman-american-psycho-glasses.png.jpg');
-    position: absolute;
-    top : 200px;
+    position : fixed;
+    left : 50%;
+    top : 0;
+    transform: translate(-50%,40%);
     background-size: cover;
     display: none;
     border : 8px solid white;
@@ -90,8 +92,10 @@ header{
 }
 .try-again{
     background-image: url('https://s3.insidehook.com/header_american_1461329777.jpg');
-    position: absolute;
-    top : 200px;
+    position : fixed;
+    left : 50%;
+    top : 0;
+    transform: translate(-50%,40%);
     background-size: cover;
     border : 8px solid white;
     display : none;
