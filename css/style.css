@@ -381,7 +381,7 @@ footer{
     justify-content: space-around;
     flex-direction: column;
     position : fixed;
-    left : 82%;
+    left : 20%;
     top : 0;
     transform: translate(-50%,40%);
     border: 8px solid #af9574;
