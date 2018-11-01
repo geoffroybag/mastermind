@@ -2,13 +2,65 @@
     border : 1px solid black;
 } */
 
+
+.btn-play:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    background-color : white;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
+
+.btn-play2:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    background-color : white;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
+
+a:hover{
+    color: #404040 !important;
+    font-weight: 700 !important;
+}
+
+
 body{
     height : 1200px;
     margin: 0px;
+    font-family: Helvetica, sans-serif;
+    
+}
+
+.h2-class{
+    font-weight : lighter;
+    font-family: Helvetica, sans-serif;
+}
+
+.header-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 130px;
+}
+h1{
+    background-image: url(../images/logo.png);
+    height : 200px;
+    width : 250px;
+    background-size: contain;
+    margin-top: 40px;
+
+
+}
+.btn-play{
+    display: inline;
 }
 
 .background{
-    background-image: url(https://s3.insidehook.com/header_american_1461329777.jpg);
+    /* background-image: url(https://s3.insidehook.com/header_american_1461329777.jpg); */
+    background-color: black;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -23,6 +75,8 @@ header{
     flex-direction: column;
     align-items: center;
     color : white;
+    justify-content: space-between;
+    height : 100vh;
 }
 
 .well-done{
@@ -37,7 +91,7 @@ header{
     width: 800px;
 }
 .try-again{
-    background-image: url('http://monipag.com/antonin-pelletier/wp-content/uploads/sites/1349/2013/05/bateman-american-psycho-glasses.png.jpg');
+    background-image: url('https://s3.insidehook.com/header_american_1461329777.jpg');
     position: absolute;
     top : 200px;
     background-size: cover;
@@ -67,6 +121,8 @@ section{
     background-color: antiquewhite;
     width : 50%;
     border: 8px solid #af9574;
+    position: absolute;
+    top : 40%;
 }
 .result{
     text-align: center;
@@ -119,7 +175,7 @@ section{
 
 .hole{
     border-radius: 50%;
-    background-color: #000000d4;
+    background-color: #000000af;
     height : 30px;
     width : 30px;
     margin : 4px;
@@ -292,10 +348,75 @@ footer{
 }
 
 
+.help {
+    width : 90%;
+    display : flex;
+    justify-content: flex-end;
+    margin-top : 10px;
+}
+
+.btn-help{
+    background-color: white;
+    color : black;
+    border-radius: 50%;
+    height : 30px;
+    width : 30px;
+    display : flex; 
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-help h5{
+    font-size: 20px;
+}
+
+.help-section{
+    display: none;
+}
+
+.help-box{
+    padding : 10px;
+    background-color: white;
+    display : flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position : fixed;
+    left : 82%;
+    top : 0;
+    transform: translate(-50%,40%);
+    border: 8px solid #af9574;
+    width : 400px;
+    height : 500px;
+}
+
+.help-box h5{
+    align-self: center;
+}
+.help-box p,li{
+    font-size : 10px;
+}
+
+
 @media(max-width : 768px){
   
 section{
     width : 90%;
+}
+
+.btn-play{
+    margin-top : 0;
+    margin : 10px;
+    height: 60px;
+}
+
+.btn-play2{
+    margin-top : 0;
+    margin : 10px;
+    height: 60px;
+}
+
+.header-bottom{
+    margin-bottom: 0px;
+    margin : 10px;
 }
 
 .result{
@@ -314,6 +435,7 @@ section{
 .try-again{
     width : 90%;
     height : 25%;
+    font-size : 3rem;
 }
 .well-done{
     width : 90%;
@@ -330,4 +452,86 @@ footer h3{
 img{
     width: 100%;
 }
+
+.btn-select-players{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: auto;
+}
+.h2-class{
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+    font-weight : lighter;
+    font-family: Helvetica, sans-serif;
+}
     }
+
+
+
+/* ///////// animation */
+
+@import "compass/css3";
+
+
+
+/* Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  background-color: white;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+svg{
+    height: 56px;
+}
+
+

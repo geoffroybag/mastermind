@@ -13,11 +13,18 @@
 
 
     <header>
-        <h1><img src="./images/logo.png" alt=""></h1>
-        <h2>The classic code cracking game</h2>
+            <div class="logo">
+                    <h1></h1>
+            </div>
+            <div class="header-bottom">
+                    <h2></h2>
+                </div>
     </header>
 
 <section class = "section-enter-code">
+        <div class="help">
+                <div class = "btn-help"><h5>?</h5></div>
+        </div>
         <h4>Enter the code</h4>
         <div class = "enter-code result">
             <div class="subdiv-number"></div>
@@ -43,6 +50,9 @@
 </section>
 
 <section class = "section-guess-the-code">
+        <div class="help">
+                <div class = "btn-help"><h5>?</h5></div>
+        </div>
         <div class="result">
                 <div class="subdiv-number"></div>
                 <div class="subdiv-hole">
@@ -90,6 +100,27 @@
         <button class = "play-again"><a href="./index.html">Play again</a></button>
 </footer>
 
+<div class="help-section">
+        <div class= "help-box">
+            <h5>Help Section</h5>
+            
+            <p>Mastermind is a puzzle game, in which one player tries to guess the code their opponent comes up with</p>
+            <p>The code maker select a code - a combination of colors</p>
+            <p>This is the code that the code breaker will try to guess (max 8 guesses).</p>
+            <p>Next to each "guess row" is a small square with enough holes for four tiny pegs.</p>
+                <p>These pegs only come in two colors: white and black and give clues about how good the guess was:</p>
+                <ul>
+                    <li>Each white peg means that one of the guessed pegs is correct, but is in the wrong hole.</li>
+                    <li>Each black peg means that one of the guessed pegs is correct, and is in the right hole.</li>
+                    <li>The order of the white and black pegs does not matter.</li>
+                </ul>
+                   <p>Continue until the code is guessed or there are no more guesses left. 
+                       The code breaker continues to make guesses, using information from all the previous hints he earned. 
+                       If he manages to guess the complete code in exactly the right order, he wins the game. 
+                       If he fails to guess and fills every row with pegs, the code maker wins instead.</p>
+            
+        </div>
+</div>
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>

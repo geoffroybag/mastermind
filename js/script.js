@@ -16,6 +16,12 @@ function masterMind(){
     return arrayResult
 }
 
+$(".btn-help").hover(function(){
+  $(".help-section").css({"display":"flex"})
+}, 
+function(){$(".help-section").css({"display":"none"})}
+)
+
 // arrayGuess
 var arrayGuess = [0,0,0,0];
 var whiteGuess = 0
@@ -144,11 +150,14 @@ $(".btn-check").click(function () {
       $(".btn-check").css({"display":"none"});
       $(".color-section").css({"display":"none"});
       setTimeout(function(){
-        $(".try-again").css({"display":"flex"})
+        $("section").css({"display":"none"})
       }, 2000);
       setTimeout(function(){
-        $(".background").addClass("transparent")
+        $(".try-again").css({"display":"flex"})
       }, 2000);
+      // setTimeout(function(){
+      //   $(".background").addClass("transparent")
+      // }, 2000);
     }
     
     if(blackGuess<4 && count < 9){
@@ -213,6 +222,7 @@ $(document).ready(function(){
     $("section").css({"display":"flex"})
     $(".btn-play").css({"display":"none"})
     $(".btn-play2").css({"display":"none"})
+    $(".header-bottom").css({"display":"none"})
   })
 
 
@@ -232,3 +242,4 @@ $(document).ready(function(){
 setTimeout(function(){
   odometer.innerHTML = 59072;
 }, 500);
+

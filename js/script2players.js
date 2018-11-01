@@ -93,6 +93,11 @@ $(".btn-hide").click(function () {
 
 })
 
+$(".btn-help").hover(function(){
+    $(".help-section").css({"display":"flex"})
+  }, 
+  function(){$(".help-section").css({"display":"none"})}
+  )
 
 var count = 1
 
