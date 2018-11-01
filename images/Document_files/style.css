@@ -398,18 +398,6 @@ footer{
 
 @media(max-width : 768px){
   
-.help-section{
-    position: fixed;
-    left: 32%;
-    width: 58%;
-    top: 0px;
-    transform: translate(-50%, 40%);
-}
-}    
-
-.help-box{
-    width: 141%;
-}    
 section{
     width : 90%;
 }

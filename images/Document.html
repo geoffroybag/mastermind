@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///Users/geoffroy/code/projects/project1/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./Document_files/odometer-theme-car.css">
+    <script src="./Document_files/odometer.js"></script>
+    <link rel="stylesheet" href="./Document_files/style.css">
+</head>
+<body>
+
+<div class="background">
+
+
+    <header>
+        <div class="logo">
+        <h1></h1>
+        </div>
+        <div class="header-bottom" style="display: none;">
+        <h2 class="h2-class">The classic code cracking game up to</h2>
+        <div id="odometer" class="odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span></div></div>
+
+        <h2 class="h2-class">combinations</h2>
+        <div class="btn-select-players">
+            <button class="btn-play" style="display: none;">1 PLAYER</button>
+            <a href="file:///Users/geoffroy/code/projects/project1/index2players.html"><button class="btn-play2" style="display: none;">2 PLAYERS</button></a>
+        </div>
+    </div>
+</header>
+    <section style="display: flex;">
+        <div class="help">
+                <div class="btn-help"><h5>?</h5></div>
+        </div>
+        <div class="result">
+                <div class="subdiv-number"></div>
+                <div class="subdiv-hole">
+                    <div class="hole hole-result result-1 white"></div>
+                    <div class="hole hole-result result-2 blue"></div>
+                    <div class="hole hole-result result-3 violet"></div>
+                    <div class="hole hole-result result-4 red"></div>
+                </div>
+                <div class="subdiv-res temp-result" name="tempresult0">
+                    </div>
+        </div>    
+
+        <div class="guess guess1" name="guess1">
+            <div class="subdiv-number">1</div>
+            <div class="subdiv-hole">
+                <div class="hole" name="1"></div>
+                <div class="hole" name="2"></div>
+                <div class="hole" name="3"></div>
+                <div class="hole" name="4"></div>
+            </div>
+            <div class="subdiv-res temp-result" name="tempresult1">
+            </div>
+        </div>
+
+        <button class="btn-check">GO</button>
+        <div class="color-section blocked">
+            <div class="color white" name="white"></div>
+            <div class="color blue" name="blue"></div>
+            <div class="color yellow" name="yellow"></div>
+            <div class="color green" name="green"></div>
+            <div class="color red" name="red"></div>
+            <div class="color violet" name="violet"></div>
+        </div>
+</section>
+</div>
+
+<footer class="well-done">
+        <h3>Well Done</h3>
+        <button class="play-again"><a href="file:///Users/geoffroy/code/projects/project1/index.html">Play again</a> </button>
+</footer>
+
+<footer class="try-again">
+        <h3><svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+            <!-- Symbol -->
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+                  TRY AGAIN
+               </text>
+            </symbol>
+          
+            <!-- Duplicate symbols -->
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+          
+          </svg></h3>
+        <button class="play-again"><a href="file:///Users/geoffroy/code/projects/project1/index.html">Play again</a> </button>
+</footer>
+
+<div class="help-section" style="display: none;display: flex;position: fixed;left: 32%;width: 58%;top: 0px;transform: translate(-50%, 40%);">
+    <div class="help-box">
+        <h5>Help Section</h5>
+        
+        <p>Mastermind is a puzzle game, in which one player tries to guess the code their opponent comes up with</p>
+        <p>The code maker select a code - a combination of colors</p>
+        <p>This is the code that the code breaker will try to guess (max 8 guesses).</p>
+        <p>Next to each "guess row" is a small square with enough holes for four tiny pegs.</p>
+            <p>These pegs only come in two colors: white and black and give clues about how good the guess was:</p>
+            <ul>
+                <li>Each white peg means that one of the guessed pegs is correct, but is in the wrong hole.</li>
+                <li>Each black peg means that one of the guessed pegs is correct, and is in the right hole.</li>
+                <li>The order of the white and black pegs does not matter.</li>
+            </ul>
+               <p>Continue until the code is guessed or there are no more guesses left. 
+                   The code breaker continues to make guesses, using information from all the previous hints he earned. 
+                   If he manages to guess the complete code in exactly the right order, he wins the game. 
+                   If he fails to guess and fills every row with pegs, the code maker wins instead.</p>
+        
+    </div>
+</div>
+
+<script src="./Document_files/odometer.js"></script>
+<script type="text/javascript" src="./Document_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Document_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Document_files/jquery.flip.min.js"></script>
+<script src="./Document_files/script.js"></script>
+
+</body></html>
