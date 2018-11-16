@@ -1,8 +1,3 @@
-/* *{
-    border : 1px solid black;
-} */
-
-
 .btn-play:hover {
     color: #404040 !important;
     font-weight: 700 !important;
@@ -31,7 +26,6 @@ body{
     height : 1200px;
     margin: 0px;
     font-family: Helvetica, sans-serif;
-    
 }
 
 .h2-class{
@@ -51,8 +45,6 @@ h1{
     width : 250px;
     background-size: contain;
     margin-top: 40px;
-
-
 }
 
 
@@ -432,6 +424,11 @@ footer{
     transform: translate(-50%, 40%);
 } 
 
+h1{
+    height: 128px;
+    width: 150px;
+}
+
 .help-box{
     width: 141%;
 }    
@@ -485,6 +482,7 @@ footer h3{
 img{
     width: 100%;
 }
+
 
 .btn-select-players{
     display: flex;
